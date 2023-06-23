@@ -1,0 +1,179 @@
+:root {
+--gradient-soft-violet: hsl(273, 75%, 66%);
+--gradient-soft-blue: hsl(240, 73%, 65%);
+
+--text-desat-blue: hsl(238, 29%, 16%);
+--text-soft-red: hsl(14, 88%, 65%);
+--text-grayish-blue-600: hsl(240, 6%, 50%);
+--text-grayish-blue-800: hsl(237, 12%, 33%);
+
+--divider-grayish-blue: hsl(240, 5%, 91%);
+    
+--ff-KumbhSans: 'Kumbh Sans', sans-serif;
+--fw-400: 400;
+--fw-700: 700;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html, body{
+    height: 100%;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+  }
+
+  body{
+    font-family: var(--ff-KumbhSans);
+    font-size: 1.2rem;
+    font-weight: var(--fw-400);
+    color: var(--text-grayish-blue-800);
+    background-color: var(--gradient-soft-violet);
+    background: linear-gradient(
+        var(--gradient-soft-violet),
+        var(--gradient-soft-blue));
+
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  .faq-card{
+    background-color: white;
+    border-radius: 2em;
+    margin: 2em;
+    
+  }
+
+  .mobile-img{
+    transform: translateY(-110px);
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  
+  .mobile-img-background{
+    position: relative;
+    top: -180px;
+    margin: 0 auto;
+    margin-bottom: -180px;
+    z-index: 2;
+  }
+
+  .desktop{
+    display: none;
+  }
+
+ .text-container{
+    padding: 2em 2.5em;
+ }
+
+ .title{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--text-desat-blue);
+ }
+
+ .question{
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    padding: 1em 0;
+    cursor: pointer;
+ }
+
+ .question:hover{
+  color: var(--text-soft-red);
+ }
+
+ .active.question {
+  font-weight: var(--fw-700);
+  color: var(--text-grayish-blue-800);
+ }
+
+ .answer{
+    color: var(--text-grayish-blue-600);
+    padding-bottom: 1em;
+    display: none;
+ }
+
+ .active svg{
+  transform: rotate(180deg);
+ }
+
+ hr{
+    background-color: var(--divider-grayish-blue);
+    opacity: .5 ;
+ }
+
+ @media(min-width:600px){
+  .faq-card{
+    display: flex;
+    align-items: center;
+    width: 900px;
+    overflow: hidden;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .desktop{
+    display: block;
+    padding: 4em;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -555px -330px;
+    
+  }
+
+  .desktop-img{
+    transform: translateX(-110px);
+  }
+  .desktop-img-box{
+    position: absolute;
+    top: 385px;
+    left: 140px;
+  }
+
+ .text-container{
+  margin: 0 auto;
+  padding-right: 6em;
+  width: 50%;
+  margin-left: -120px;
+  font-size: 1.4rem;
+ }
+
+ .title{
+  text-align: left;
+  margin-bottom: 1em;
+ }
+}
+
+.attribution { 
+    font-size: 1.4rem; 
+    text-align: center; 
+    color: var(--text-desat-blue);
+}
+   
+.attribution a { 
+        color: white; 
+    }
